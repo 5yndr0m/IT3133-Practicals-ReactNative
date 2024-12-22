@@ -19,13 +19,6 @@ A simple React Native application built with Expo and React Native Paper, featur
 - Cross-platform layout and styling
 - Scrollable content within a `ScrollView`
 
-## 📒 Dependencies
-
-- `expo`: ~50.0.0
-- `react-native`: 0.73.2
-- `react-native-paper`: ^5.10.0
-- `react-native-safe-area-context`: ^4.8.2
-
 ## 📸 Screenshots
 ![App Home Screen](./screenshots/HomeScreen.jpeg)<br/>
 **Figure 1: Home Screen with Text and Button**
