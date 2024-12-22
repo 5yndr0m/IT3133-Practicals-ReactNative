@@ -5,11 +5,13 @@ This repository contains the react native practical assignments for the IT3133 m
 ## 📋 How to use
 
 1. Clone this repo
-2. Navigate to the appenv folder
-3. Run `npm install` to install dependencies
-4. Run `npx expo start` to start the app or use `npm start web` to start the app in the web browser
-5. Use expo go app to run a live environment
-9. If using the web version, Open the browser and navigate to `http://localhost:8080`
+2. Copy the app folder from the presented dated folders in practicals folder
+3. Navigate to the appenv folder
+4. Replace the existing app folder with the copied one
+5. Run `npm install` to install dependencies
+6. Run `npx expo start` to start the app or use `npm start web` to start the app in the web browser
+7. Use expo go app to run a live environment
+8. If using the web version, Open the browser and navigate to `http://localhost:8081`
 
 ## 🛠️ Technologies Used
 
@@ -37,7 +39,7 @@ IT3133-Practicals/
 
 | Date | Topic | README Link |
 |------|--------|------------|
-| 17 Dec 2024 | React Native Expo basics | [View Details](./appenv/app/README.md) |
+| 17 Dec 2024 | React Native Expo basics | [View Details](./practicals/17_Dec_2024/README.md) |
 
 
 
