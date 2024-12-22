@@ -27,3 +27,7 @@ A simple React Native application built with Expo and Expo Router, featuring a w
 - `react`: 18.2.0
 - `react-native`: 0.73.2
 - `react-native-safe-area-context`: ^4.8.2
+
+## Screenshots
+![Welcome Page](./screenshots/Output.png)
+**Figure 1**
