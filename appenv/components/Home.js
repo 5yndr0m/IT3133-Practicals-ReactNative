@@ -1,5 +1,5 @@
 import { StyleSheet, View, ScrollView } from 'react-native';
-import { Text, Divider } from 'react-native-paper';
+import { Text, Divider, Button } from 'react-native-paper';
 
 export default function Home() {
   return (
@@ -12,6 +12,9 @@ export default function Home() {
         
         The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
       </Text>
+      <Button icon="camera" mode="contained" onPress={() => console.log('camera button pressed')} style={styles.btnstyle}>
+        Camera
+      </Button>
     </>
   );
 }
@@ -20,5 +23,8 @@ const styles = StyleSheet.create({
   body: {
     padding: 8,
     textAlign: 'justify',
+  },
+  btnstyle: {
+    margin: 8,
   }
 });
