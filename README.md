@@ -13,7 +13,7 @@ This repository contains the react native practical assignments for the IT3133 m
 
 ## 🛠️ Technologies Used
 
-- React.js
+- React Native Expo
 - Node.js
 - NPM
 
