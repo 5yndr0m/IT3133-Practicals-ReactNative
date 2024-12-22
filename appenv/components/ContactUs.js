@@ -3,7 +3,6 @@ import { Text, Divider, Button, TextInput } from 'react-native-paper';
 import { useState } from 'react';
 
 export default function ContactUs() {
-  const [name, setName] = useState('');
   const [userData, setUserData] = useState({
     name: '',
     email: '',
@@ -11,14 +10,12 @@ export default function ContactUs() {
     message: '',
   });
   
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setUserData((prevState) => ({
+  const handleInputChange = (value, fieldName) => {
+    setUserData(prevState => ({
       ...prevState,
-      [name]: value,
+      [fieldName]: value,
     }))
   };
-
   
   return (
     <>
@@ -27,12 +24,43 @@ export default function ContactUs() {
         <Divider />
       </View>
       <View style={styles.body}>
-        <Text variant="bodyMedium">Please fill out the form below to contact us.</Text>
-        <TextInput label="Name" mode="outlined" name="name" value={userData.name} onChange={handleInputChange} />
-        <TextInput label="Email" mode="outlined" keyboardType="email-address" name="email" value={userData.email} onChange={handleInputChange} />
-        <TextInput label="Phone" mode="outlined" keyboardType="phone-pad" name="phone" value={userData.phone} onChange={handleInputChange} />
-        <TextInput label="Message" mode="outlined" multiline numberOfLines={5} name="message" value={userData.message} onChange={handleInputChange} />
-        <Text>{ name }</Text>
+        <Text variant="bodyMedium" style={styles.instruction}>Please fill out the form below to contact us.</Text>
+        <TextInput 
+          label="Name" 
+          mode="outlined" 
+          value={userData.name} 
+          onChangeText={(value) => handleInputChange(value, 'name')}
+          style={styles.input} 
+        />
+        <TextInput 
+          label="Email" 
+          mode="outlined" 
+          keyboardType="email-address" 
+          value={userData.email} 
+          onChangeText={(value) => handleInputChange(value, 'email')}
+          style={styles.input} 
+        />
+        <TextInput 
+          label="Phone" 
+          mode="outlined" 
+          keyboardType="phone-pad" 
+          value={userData.phone} 
+          onChangeText={(value) => handleInputChange(value, 'phone')}
+          style={styles.input} 
+        />
+        <TextInput 
+          label="Message" 
+          mode="outlined" 
+          multiline 
+          numberOfLines={5} 
+          value={userData.message} 
+          onChangeText={(value) => handleInputChange(value, 'message')}
+          style={styles.input} 
+        />
+        <Text>Name : { userData.name }</Text>
+        <Text>Email : { userData.email  }</Text>
+        <Text>Phone : { userData.phone }</Text>
+        <Text>Message : { userData.message }</Text>
       </View>
       <View style={styles.footer}>
         <Text style={{ textAlign: 'center' }}>MyApp © 2024</Text>
@@ -50,11 +78,17 @@ const styles = StyleSheet.create({
     flex: 6,
     width: '100%',
     padding: 5,
-    
   },
   footer: {
     flex: 2,
     width: '100%',
     padding: 5,
+  },
+  instruction: {
+    marginBottom: 16,
+  },
+  input: {
+    marginBottom: 10,
+    backgroundColor: 'white',
   }
 });
