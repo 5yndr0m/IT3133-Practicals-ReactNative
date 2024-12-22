@@ -57,10 +57,10 @@ export default function ContactUs() {
           onChangeText={(value) => handleInputChange(value, 'message')}
           style={styles.input} 
         />
-        <Text>Name : { userData.name }</Text>
-        <Text>Email : { userData.email  }</Text>
-        <Text>Phone : { userData.phone }</Text>
-        <Text>Message : { userData.message }</Text>
+        <Text>Name : { userData.name ? userData.name : 'Not provided' }</Text>
+        <Text>Email : { userData.email ? userData.email : 'Not provided' }</Text>
+        <Text>Phone : { userData.phone ? userData.phone : 'Not provided' }</Text>
+        <Text>Message : { userData.message ? userData.message : 'Not provided' }</Text>
       </View>
       <View style={styles.footer}>
         <Text style={{ textAlign: 'center' }}>MyApp © 2024</Text>
