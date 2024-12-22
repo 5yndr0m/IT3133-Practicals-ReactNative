@@ -29,5 +29,5 @@ A simple React Native application built with Expo and Expo Router, featuring a w
 - `react-native-safe-area-context`: ^4.8.2
 
 ## Screenshots
-![Welcome Page](./screenshots/Output.png)
+![Welcome Page](./screenshots/Output.png)<br/>
 **Figure 1**
