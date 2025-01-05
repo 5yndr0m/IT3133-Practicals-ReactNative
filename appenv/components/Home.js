@@ -1,30 +1,53 @@
+import { useNavigation } from '@react-navigation/native';
 import { StyleSheet, View, ScrollView } from 'react-native';
-import { Text, Divider, Button } from 'react-native-paper';
+import { PaperProvider, Text, Divider, Button } from 'react-native-paper';
 
 export default function Home() {
-  return (
-    <>
-      <Text variant="headlineLarge">Lorem Ipsum</Text>
-      <Divider />
-      <Text variant="bodyMedium" style={styles.body}>
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-        Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
-        
-        The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
-      </Text>
-      <Button icon="camera" mode="contained" onPress={() => console.log('camera button pressed')} style={styles.btnstyle}>
-        Camera
-      </Button>
-    </>
-  );
+   const navigation = useNavigation();
+    return (
+        <PaperProvider>
+            <ScrollView contentContainerStyle={styles.scrollView}>
+                <View style={styles.container}>
+                    <Text variant="headlineLarge">Headline Large</Text>
+                    <Divider />
+                    <Text variant="bodyMedium" style={styles.body}>
+                        Video provides a powerful way to help you prove your point. When you click Online Video, you can paste in the embed code for the video you want to add. You can also type a keyword to search online for the video that best fits your document.
+                        To make your document look professionally produced, Word provides header, footer, cover page, and text box designs that complement each other. For example, you can add a matching cover page, header, and sidebar. Click Insert and then choose the elements you want from the different galleries.
+                        Themes and styles also help keep your document coordinated. When you click Design and choose a new Theme, the pictures, charts, and SmartArt graphics change to match your new theme. When you apply styles, your headings change to match the new theme.
+                        Save time in Word with new buttons that show up where you need them. To change the way a picture fits in your document, click it and a button for layout options appears next to it. When you work on a table, click where you want to add a row or a column, and then click the plus sign.
+                        Reading is easier, too, in the new Reading view. You can collapse parts of the document and focus on the text you want. If you need to stop reading before you reach the end, Word remembers where you left off - even on another device.
+
+                        Video provides a powerful way to help you prove your point. When you click Online Video, you can paste in the embed code for the video you want to add. You can also type a keyword to search online for the video that best fits your document.
+                        To make your document look professionally produced, Word provides header, footer, cover page, and text box designs that complement each other. For example, you can add a matching cover page, header, and sidebar. Click Insert and then choose the elements you want from the different galleries.
+                        Themes and styles also help keep your document coordinated. When you click Design and choose a new Theme, the pictures, charts, and SmartArt graphics change to match your new theme. When you apply styles, your headings change to match the new theme.
+                        Save time in Word with new buttons that show up where you need them. To change the way a picture fits in your document, click it and a button for layout options appears next to it. When you work on a table, click where you want to add a row or a column, and then click the plus sign.
+                        Reading is easier, too, in the new Reading view. You can collapse parts of the document and focus on the text you want. If you need to stop reading before you reach the end, Word remembers where you left off - even on another device.
+
+                    </Text>
+                    <Button icon="camera" mode="outlined" onPress={()=>navigation.navigate('contact')}>
+                        Contact Us
+                    </Button>
+                    <Button icon="camera" mode="outlined" onPress={()=>navigation.navigate('aboutus')}>
+                        About Us
+                    </Button>
+                </View>
+            </ScrollView>
+        </PaperProvider>
+    );
 }
 
 const styles = StyleSheet.create({
-  body: {
-    padding: 8,
-    textAlign: 'justify',
-  },
-  btnstyle: {
-    margin: 8,
-  }
+    container: {
+        flexDirection: 'column',
+        backgroundColor: '#fff',
+        justifyContent: 'space-between',
+        padding: 10
+    },
+    body: {
+        padding: 8,
+        textAlign: 'justify'
+    },
+    scrollView: {
+        flexGrow: 1, // Ensures the ScrollView behaves correctly
+    },
 });
