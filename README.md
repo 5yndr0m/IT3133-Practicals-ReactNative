@@ -78,6 +78,7 @@ IT3133-Practicals/
 | 17 Dec 2024 | React Native Expo Basics | [View Details](./practicals/17_Dec_2024/README.md) |
 | 19 Dec 2024 | React Native Paper | [View Details](./practicals/19_Dec_2024/README.md) |
 | 22 Dec 2024 | Text Input and state management | [View Details](./practicals/22_Dec_2024/README.md) |
+| 31 Dec 2024 | React Native Navigation | [View Details](./practicals/31_Dec_2024/README.md) |
 
 ---
 
